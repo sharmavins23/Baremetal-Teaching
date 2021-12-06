@@ -57,8 +57,19 @@ This course does not have traditional textbooks - Instead, we have datasheets.
 - [The course site](www.cse.psu.edu/~kxc104/class/cmpen472/22s/index.html) has
   most of the learning and teaching material.
 - The
+  [ARMv8 Instruction Set Architecture](https://documentation-service.arm.com/static/613a2c38674a052ae36ca307?token=)
+  is a simplified instruction set architecture, and is the easiest way to learn
+  instructions from ARM.
+- The
+  [BCM2711 ARM Peripherals Manual](https://datasheets.raspberrypi.org/bcm2711/bcm2711-peripherals.pdf)
+  is a full manual detailing the various peripherals on the Raspberry Pi board
+  that can be used. We'll use a few of these for the course.
+- The
   [ARM Cortex-A Series Programmer's Guide for ARMv8-A v1.0](https://developer.arm.com/documentation/den0024/a)
   has a lot more information in the form of technical documentation.
+- The
+  [ARM Architecture Reference Manual Armv8, for Armv8-A Architecture Profile](https://developer.arm.com/documentation/ddi0487/ga)
+  contains a PDF of all ARM instructions. It's a PDF that's 8,538 pages long.
 
 ## CMPEN 472 Web Page
 
