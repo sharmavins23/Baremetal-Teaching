@@ -44,6 +44,17 @@ The download link for Windows is here:
 Run the executable, and allow it to download everything that's already checked.
 Press Finish and you'll be done with Make.
 
+### Installing PuTTY
+
+PuTTY is a terminal application that allows you to connect (via SSH) into
+clients. It's an open-source software, and you can download it
+[here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+
+We'll be using PuTTY to connect to the serial terminal on the Raspberry Pi.
+
+For modern Windows machines, install the 64-bit x86 application. It's a simple
+installer with no settings to mess with.
+
 ### Installing an IDE
 
 If you have a Mac, you already need Xcode, as the Make utility will be installed
@@ -77,3 +88,5 @@ harder to find errors in your code, though.
 ## Hardware Setup
 
 You need an SD card to install the Serial Terminal code.
+
+https://www.instructables.com/Bare-Metal-Raspberry-Pi-3Blinking-LED/
