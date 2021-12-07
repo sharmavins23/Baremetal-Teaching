@@ -56,6 +56,8 @@ This course does not have traditional textbooks - Instead, we have datasheets.
 
 - [The course site](www.cse.psu.edu/~kxc104/class/cmpen472/22s/index.html) has
   most of the learning and teaching material.
+- [Introduction to Computer Organization: ARM Assembly Language Using the Raspberry Pi](https://bob.cs.sonoma.edu/IntroCompOrg-RPi/intro-co-rpi.html)
+  is the **closest** thing we have to a full textbook for this course.
 - The
   [ARMv8 Instruction Set Architecture](https://documentation-service.arm.com/static/613a2c38674a052ae36ca307?token=)
   is a simplified instruction set architecture, and is the easiest way to learn
