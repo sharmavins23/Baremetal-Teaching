@@ -1,6 +1,7 @@
 # 01-01 Initial Setup
 
-Let's talk about setting up the Raspberry Pi in order to code baremetal.
+Let's talk about setting up the Raspberry Pi in order to code baremetal
+projects.
 
 ## Software Installation
 
@@ -9,23 +10,55 @@ Let's talk about setting up the Raspberry Pi in order to code baremetal.
 First, we need to install an assembler. This will take our assembly code and
 convert it into binary code that the machine will read.
 
+Sadly, there are no easy installers for this. You'll have to install everything
+manually.
+
 The download link is here:
-[GNU ARM Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
+[GNU AARCH64 ARM Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads)
 
-On a Windows system, you would install the Windows 32-bit installer (even if you
-have a 64-bit machine.) As of writing this guide, the current version is named:
-`gcc-arm-none-eabi-10.3-2021.10-win32.exe`
+You must install the AArch64 Bare-Metal target (aarch64-none-elf). As of writing
+this guide, the current version is:
+`gcc-arm-10.3-2021.07-mingw-w64-i686-aarch64-none-elf.tar.xz`.
 
-Run that executable, and allow it to install wherever it wants (or choose a home
-for it, if you so wish.)
+Using WinRAR or 7Zip, open this file. In `C:/Program Files (x86)`, create a new
+folder (I called mine `GCC-ARM-MinGW`.) Place all of the files within
+`gcc-arm-10.3-2021.07-mingw-w64-i686-aarch64-none-elf` in this new folder. Your
+directory should look like this:
 
-On the end screen, make sure you check the boxes
-`Add path to environment variable` and `Add registry information.` If you did
-not check these boxes, you may have to re-run the installer.
+```
+C:/Program Files (x86)/GCC-ARM-MinGW
+├─ aarch64-none-elf
+├─ bin
+├─ include
+├─ lib
+├─ libexec
+├─ share
+└─ 10.3-2021.07-mingw-w64-i686-aarch64-none-elf-manifest.txt
+```
 
-![Image of the GNU Toolchain Installer](img/GNU-Toolchain-PATH.png)
+Now we have to add the `bin` folder to our PATH, which allows a command prompt
+or other shell access to the compiler programs we just installed. Press the
+Windows button, then type in `Environment Variables.`
 
-Press Finish, and you've installed the toolchain.
+![Start Menu Environment Variables](img/Start-Menu-Env-Vars.png)
+
+In this page, click on `Environment Variables...`
+
+![CTRL Panel's System Properties](img/CTRL-System-Properties.png)
+
+In this page, ensure that `Path` is selected, and press `Edit...`
+
+![PATH Selection in Environment Variables](img/PATH-Env-Vars.png)
+
+This is a list of strings. Add a string for the `bin` folder of the new folder
+you just created. An example is below. Don't modify any other strings - Other
+programs might use those, and changing the other strings might break
+installations of other things.
+
+![PATH Environment Variables List](img/PATH-Environment-Vars-List.png)
+
+Press `OK` and `Apply` as you leave the variables section. Once you get out of
+these menus, you're done installing the toolchain.
 
 ### Installing MAKE
 
@@ -54,6 +87,34 @@ We'll be using PuTTY to connect to the serial terminal on the Raspberry Pi.
 
 For modern Windows machines, install the 64-bit x86 application. It's a simple
 installer with no settings to mess with.
+
+Press the Windows button, and type Device Manager.
+
+![Start Menu Device Manager](img/Start-Menu-Dev-Man.png)
+
+Under the Ports dropdown, you should see a listing of the connected ports. If
+your USB-TTL cable is plugged into your PC, you should be able to see the device
+loaded in. Keep a mental note of which COM port it is - Mine is COM6.
+
+![Device Manager Ports Dropdown](img/Dev-Man-Ports.png)
+
+In PuTTY, click `Connection > Serial` and configure the settings like this.
+Change the `Serial line to connect to` box to whatever COM port you have on your
+PC.
+
+![PuTTY Serial Configuration](img/PuTTY-Serial-Config.png)
+
+Then, click on `Session`, set the `Connection Type` to `Serial`, and notice that
+the `Serial line` and `Speed` have automatically updated to your settings. Write
+`RPi` in the `Saved Sessions` box and press `Save` to save this configuration
+for later use. I named mine `RPi4` since I'm using a Raspberry Pi 4, but the
+settings are the exact same with other Raspberry Pi models as well.
+
+![PuTTY Session Configuration](img/PuTTY-Session-Config.png)
+
+Every time you connect to your Raspberry Pi, you can simply load the `RPi`
+session and press `Open` to open a terminal. This terminal will communicate with
+your Raspberry Pi through the USB-TTL cable.
 
 ### Installing an IDE
 

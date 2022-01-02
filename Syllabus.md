@@ -39,39 +39,47 @@ computer.
 In order to set up the Raspberry Pi, a **Micro-SD card** is required to transfer
 the serial monitor. Students who do not have this may speak with the instructor.
 
+A **USB to TTL cable** is required for connecting to the serial output of the
+board. On one end, a USB connector breaks out into four wires - Red, Green,
+White, Black. Ensure you buy one with good connectors on the cables (that is,
+black pin connectors that can be slotted into the pins of a Breadboard.)
+
 Finally, a **tester board** is required. This board contains several LEDs,
 switches, and 2 7-segment displays in order to show functionality of assembly
 programs. _More on this later._
 
+IF you decide to forego the tester board, you'll need a series of devices
+separately. _More on this later._
+
 ## Laboratory Access
 
-- Students can perform all laboratory assignments with their own laptops. More
-  on required material will be below.
-- Students can also access the CSE Windows PC Lab in _Room W136 Westgate._
-  Please see the instructor if you need remote access.
+-   Students can perform all laboratory assignments with their own laptops. More
+    on required material will be below.
+-   Students can also access the CSE Windows PC Lab in _Room W136 Westgate._
+    Please see the instructor if you need remote access.
 
 ## Textbooks
 
 This course does not have traditional textbooks - Instead, we have datasheets.
 
-- [The course site](www.cse.psu.edu/~kxc104/class/cmpen472/22s/index.html) has
-  most of the learning and teaching material.
-- [Introduction to Computer Organization: ARM Assembly Language Using the Raspberry Pi](https://bob.cs.sonoma.edu/IntroCompOrg-RPi/intro-co-rpi.html)
-  is the **closest** thing we have to a full textbook for this course.
-- The
-  [ARMv8 Instruction Set Architecture](https://documentation-service.arm.com/static/613a2c38674a052ae36ca307?token=)
-  is a simplified instruction set architecture, and is the easiest way to learn
-  instructions from ARM.
-- The
-  [BCM2711 ARM Peripherals Manual](https://datasheets.raspberrypi.org/bcm2711/bcm2711-peripherals.pdf)
-  is a full manual detailing the various peripherals on the Raspberry Pi board
-  that can be used. We'll use a few of these for the course.
-- The
-  [ARM Cortex-A Series Programmer's Guide for ARMv8-A v1.0](https://developer.arm.com/documentation/den0024/a)
-  has a lot more information in the form of technical documentation.
-- The
-  [ARM Architecture Reference Manual Armv8, for Armv8-A Architecture Profile](https://developer.arm.com/documentation/ddi0487/ga)
-  contains a PDF of all ARM instructions. It's a PDF that's 8,538 pages long.
+-   [The course site](www.cse.psu.edu/~kxc104/class/cmpen472/22s/index.html) has
+    most of the learning and teaching material.
+-   [Introduction to Computer Organization: ARM Assembly Language Using the Raspberry Pi](https://bob.cs.sonoma.edu/IntroCompOrg-RPi/intro-co-rpi.html)
+    is the **closest** thing we have to a full textbook for this course.
+-   The
+    [ARMv8 Instruction Set Architecture](https://documentation-service.arm.com/static/613a2c38674a052ae36ca307?token=)
+    is a simplified instruction set architecture, and is the easiest way to
+    learn instructions from ARM.
+-   The
+    [BCM2711 ARM Peripherals Manual](https://datasheets.raspberrypi.org/bcm2711/bcm2711-peripherals.pdf)
+    is a full manual detailing the various peripherals on the Raspberry Pi board
+    that can be used. We'll use a few of these for the course.
+-   The
+    [ARM Cortex-A Series Programmer's Guide for ARMv8-A v1.0](https://developer.arm.com/documentation/den0024/a)
+    has a lot more information in the form of technical documentation.
+-   The
+    [ARM Architecture Reference Manual Armv8, for Armv8-A Architecture Profile](https://developer.arm.com/documentation/ddi0487/ga)
+    contains a PDF of all ARM instructions. It's a PDF that's 8,538 pages long.
 
 ## CMPEN 472 Web Page
 
@@ -191,10 +199,10 @@ two simple rules:
 
 Be sure to follow the following academic integrity guidelines:
 
-- [Academic Administrative Policies and Procedures Manual](https://undergrad.psu.edu/aappm/G-9-academic-integrity.html):
-  Penn State's academic integrity page
-- [Academic Integrity Standards for CMPSC, CMPEN, and CSE Programming Courses](https://www.eecs.psu.edu/students/resources/EECS-CSE-Academic-Integrity.aspx):
-  Penn State's Department of CSE academic integrity page
+-   [Academic Administrative Policies and Procedures Manual](https://undergrad.psu.edu/aappm/G-9-academic-integrity.html):
+    Penn State's academic integrity page
+-   [Academic Integrity Standards for CMPSC, CMPEN, and CSE Programming Courses](https://www.eecs.psu.edu/students/resources/EECS-CSE-Academic-Integrity.aspx):
+    Penn State's Department of CSE academic integrity page
 
 **Do not** post your CMPEN 472 work online. **Do not** share your CMPEN 472 work
 with others during this semester. **Do not** share your CMPEN 472 work with
@@ -205,5 +213,5 @@ others after this semester.
 Be sure to follow the Penn State health guidelines and other policies listed
 below:
 
-- [Penn State Health Guidelines](https://virusinfo.psu.edu/health-guidelines/)
-- [Penn State Policies](https://policies.psu.edu/)
+-   [Penn State Health Guidelines](https://virusinfo.psu.edu/health-guidelines/)
+-   [Penn State Policies](https://policies.psu.edu/)
