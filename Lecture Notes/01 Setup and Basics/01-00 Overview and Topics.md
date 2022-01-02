@@ -5,13 +5,16 @@ hopes to solve some of those questions (and possibly more!)
 
 ## What are we programming?
 
-We're programming a Raspberry Pi (4, 3, 2, whatever you have.)
+We're programming a Raspberry Pi (4, 3, whatever you have.) The course
+instructions will be specified towards Raspberry Pi 4, but Raspberry Pi 3 will
+still work.
 
 ### No, really?
 
 In all seriousness, we're programming on the actual metal. Hence, the term
 **"baremetal"**. The idea is to program a microcontroller by itself (so, without
-any of the higher-level abstractions.)
+any of the higher-level abstractions.) This also means that we'll be writing our
+own operating system and kernel.
 
 EE students will remember (and possibly shudder at) taking the course EE 200. In
 this course, students programmed Atmel microcontrollers to emulate state
@@ -23,7 +26,7 @@ In this course, we hope to skip those steps and write assembly directly to the
 registers, such that code can be compiled and executed quickly and without
 significant delay. We can also learn a lot about the programming process by
 working from the ground up, rather than the top down (as is customary in most
-CMPSC programs.)
+CMPSC/CMPEN programs.)
 
 ### So what is a Raspberry Pi?
 
@@ -37,8 +40,8 @@ This course isn't focusing on that - Actually, we'll be purposefully avoiding it
 for the remainder of the course. As such, a Raspberry Pi is functionally
 equivalent to any other microcontroller:
 
-- It uses some language of Assembly (in this case, ARMv8)
-- It has some form of registers (we'll talk more on these later)
+-   It uses some language of Assembly (in this case, AArch64)
+-   It has some form of registers (we'll talk more on these later)
 
 That's really it.
 
@@ -52,9 +55,23 @@ Otherwise, ¯\\\_(ツ)\_/¯
 
 ## How are we programming it?
 
-We're going to be loading a serial terminal onto the Raspberry Pi in order to
-write terminal-style code. Otherwise, all ARM assembly will be loaded directly
-to the registers and memory of the device.
+The Raspberry Pi has a chip on it that stores the firmware and some arbitrary
+boot process. This is closed source - It's extremely hard for us to work
+backwards and figure out what it's doing. As such, we won't do that.
+
+The moment this boot process hands off work to the kernel, we can intercept it.
+In doing so, we'll have to create our own operating system and kernel. Don't
+worry if this sounds extremely hard - It's actually relatively easy.
+
+We're going to be creating the kernel structure in C. All of the documentation
+for the Raspberry Pi's physical structure is available, so we'll mirror how the
+physical structure works with code. At the end of the day, our 'kernel' will be
+a bundle of helper functions simplifying access to certain parts of the
+microcontroller.
+
+In the class, you'll be asked to write Assembly (AArch64, to be specific). You
+can use this flavor of assembly to call other C functions. If you'd like, you
+can do all your work in C, but we'll only be teaching the assembly.
 
 ## What projects will we be doing?
 
